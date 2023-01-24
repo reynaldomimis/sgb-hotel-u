@@ -1,0 +1,370 @@
+.mySwiper1 {
+  min-height: 23rem;
+  width: 33rem;
+  margin-left: -1rem;
+
+  .s-card1 {
+    height: 100%;
+    width: 100%;
+    background-color: goldenrod;
+    border: 2px groove goldenrod;
+    color: rgb(26, 26, 26);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 3px;
+
+    .s-title {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .s-des {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .s-card2 {
+    height: 100%;
+    width: 100%;
+    background-color: #0d4c33;
+    border: 2px groove #0d4c33;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 3px;
+
+    .s-title {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .s-des {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .s-card3 {
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+    border: 2px groove bisque;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 3px;
+
+    .s-title {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .s-des {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .s-card4 {
+    height: 100%;
+    width: 100%;
+    background-color: #f2b036;
+    border: 2px groove #f2b036;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 3px;
+
+    .s-title {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .s-des {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .s-card5 {
+    height: 100%;
+    width: 100%;
+    background-color: #f3b493;
+    border: 2px groove #f3b493;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 3px;
+
+    .s-title {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .s-des {
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .mySwiper1 {
+    height: 25rem;
+    width: 70%;
+    text-align: center;
+    margin: -2rem auto;
+
+    .s-card1 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 1px;
+
+      .s-title {
+        font-size: 2.3rem;
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        margin: 0 3rem;
+      }
+    }
+
+    .s-card2 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 1px;
+      .s-title {
+        font-size: 2.3rem;
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        margin: 0 3rem;
+      }
+    }
+
+    .s-card3 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 1px;
+      .s-title {
+        font-size: 2.3rem;
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        margin: 0 3rem;
+      }
+    }
+
+    .s-card4 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 1px;
+
+      .s-title {
+        .s-title {
+          font-size: 2.3rem;
+          font-weight: 600;
+        }
+
+        .s-des {
+          margin-top: 1.5rem;
+          font-size: 1.5rem;
+          margin: 0 3rem;
+        }
+      }
+
+      .s-card5 {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem;
+        border-radius: 1px;
+        .s-title {
+          font-size: 2.3rem;
+          font-weight: 600;
+        }
+
+        .s-des {
+          margin-top: 1.5rem;
+          font-size: 1.5rem;
+          margin: 0 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 758px) {
+  .mySwiper1 {
+    height: 19rem;
+    width: 70%;
+    text-align: center;
+    margin: -6rem auto;
+
+    .s-card1 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 1px;
+
+      .s-title {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1rem;
+        font-size: 1rem;
+        margin: 0 1rem;
+      }
+    }
+
+    .s-card2 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 1px;
+
+      .s-title {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1rem;
+        font-size: 1rem;
+        margin: 0 1rem;
+      }
+    }
+
+    .s-card3 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 1px;
+
+      .s-title {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1rem;
+        font-size: 1rem;
+        margin: 0 1rem;
+      }
+    }
+
+    .s-card4 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 1px;
+
+      .s-title {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1rem;
+        font-size: 1rem;
+        margin: 0 1rem;
+      }
+    }
+
+    .s-card5 {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      border-radius: 1px;
+
+      .s-title {
+        font-size: var(--sTxt-ter);
+        font-weight: 600;
+      }
+
+      .s-des {
+        margin-top: 1rem;
+        font-size: var(--sTxt-cd);
+        margin: 0 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+# soto-grande-baguio-hotel

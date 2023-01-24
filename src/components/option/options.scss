@@ -1,0 +1,17 @@
+.n-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+
+  .c-t {
+    margin-bottom: 8px;
+  }
+  select {
+    width: inherit;
+    padding: 4px;
+    border: 1px solid lightgrey;
+    outline: none;
+    background-color: white;
+  }
+}

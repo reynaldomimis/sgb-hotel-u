@@ -1,0 +1,57 @@
+.cn-nav {
+  border-bottom: 3px solid ghostwhite;
+  min-width: 100%;
+  .cn-toogle {
+    border: none;
+
+    &:hover {
+      background-color: ghostwhite;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .list {
+    color: black;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+    color: #404247;
+    font-size: 1.1rem;
+    padding: 0.8rem 0 0;
+
+    &:hover {
+      border-bottom: 1px solid orangered;
+    }
+    .cn-ic {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .cn-nav {
+    .list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 5px;
+
+      &:hover {
+        transform: translateX(10px);
+        transition: all 0.2s ease-in;
+        border: none;
+        color: #000;
+
+        .cn-ic {
+          color: orangered;
+        }
+      }
+      .cn-ic {
+        font-size: 1.1rem;
+        display: block;
+        margin-right: 0.6rem;
+      }
+    }
+  }
+}

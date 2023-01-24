@@ -1,0 +1,75 @@
+.hs-title1 {
+  font-size: var(--sTxt-ter);
+  font-weight: 700;
+  color: var(--cTxt-pri);
+  margin-left: 10px;
+  color: red;
+}
+
+.mySwiper8 {
+  width: 100%;
+  background-color: white;
+  margin-top: 3rem;
+
+  .rs-ss {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .al-row {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgb(236, 235, 235);
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(215, 215, 215);
+      }
+
+      .al-date {
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .al-price {
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .hs-title1 {
+    font-size: var(--sTxt-cd);
+    font-weight: 600;
+  }
+
+  .mySwiper8 {
+    .rs-ss {
+      height: 15rem;
+      width: 100%;
+
+      .al-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: ghostwhite;
+
+        .al-date {
+          font-size: 1rem;
+        }
+        .al-price {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

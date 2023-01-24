@@ -1,0 +1,45 @@
+.hs-title {
+  font-size: var(--sTxt-sec);
+  font-weight: 700;
+  color: var(--cTxt-pri);
+  margin-left: 10px;
+}
+
+.mySwiper2 {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  margin-left: 1rem;
+
+  .rs-ss {
+    height: 20rem;
+    width: 100%;
+
+    .rs-img {
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .hs-title {
+    font-size: var(--sTxt-ter);
+    font-weight: 600;
+  }
+
+  .mySwiper2 {
+    margin: 1rem 1rem 2rem 1rem;
+
+    .rs-ss {
+      height: 15rem;
+      width: 100%;
+
+      .rs-img {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+}

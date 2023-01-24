@@ -1,0 +1,231 @@
+.lt-wrapper {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+
+  .ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3rem 0;
+
+    li {
+      list-style: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 13px 2rem;
+      background-color: #cd983f;
+      margin-right: 8px;
+      color: white;
+      border-radius: 10px;
+
+      &:hover {
+        color: var(--cText-sec);
+        cursor: pointer;
+        background-color: bisque;
+      }
+    }
+
+    .ltn-sp {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 1px solid orangered;
+
+      &:hover {
+        background-color: gainsboro;
+        cursor: pointer;
+        padding: 1rem 1rem;
+      }
+    }
+  }
+
+  .lt-row {
+    background-color: #0d4c33;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    gap: 3rem;
+    align-items: center;
+    height: 18rem;
+
+    .lt-imgt {
+      max-width: 30rem;
+      height: 20rem;
+      border-radius: 20px;
+      margin-left: -5rem;
+      margin-bottom: -8rem;
+      object-fit: cover;
+    }
+
+    .lt-col {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-right: 2rem;
+
+      .lt-t1 {
+        font-size: 2.8rem;
+        color: goldenrod;
+        line-height: 2.7rem;
+        margin-bottom: 10px;
+      }
+      .lt-l1 {
+        font-size: 1rem;
+        color: white;
+      }
+      .lt-l2 {
+        font-size: 1rem;
+        color: white;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .lt-wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+    .ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap ;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%; 
+ 
+      li {
+       list-style: none;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 60%;
+        border-radius: 2px;
+        margin-left: -1.5rem;
+
+        &:hover {
+          color: black;
+          cursor: pointer;
+        }
+      }
+
+      .ltn-sp {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 1px solid orangered;
+
+        &:hover {
+          background-color: gainsboro;
+          cursor: pointer;
+          padding: 1rem 1rem;
+        }
+      }
+    }
+
+    .lt-row {
+      background-color: ghostwhite;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      gap: 0;
+      justify-content: center;
+      height: inherit;
+      margin: 0 auto;
+      width: 100%;
+
+      .lt-imgt {
+        width: 100%;
+        height: 15rem;
+        border-radius: 10px;
+        margin-left: -1rem;
+        margin: 0 auto;
+      }
+
+      .lt-col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: inherit;
+        align-items: center;
+        margin: 1rem 0 2rem;
+      
+
+        .lt-t1 {
+          font-size: 2.5rem;
+          color: goldenrod;
+          margin: 1rem;
+        }
+        .lt-l1 {
+          font-size: 1rem;
+          color: var(--cText-sec);
+        }
+        .lt-l2 {
+          font-size: 1rem;
+          color: var(--cText-sec);
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 520px) {
+  .lt-wrapper {
+
+    .ul{
+      li{
+        width: 100%;
+      }
+    }
+   
+    .lt-row {
+      background-color: #0d4c33;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      gap: 0;
+      justify-content: center;
+      height: inherit;
+      margin: 0 auto;
+      width: 100%;
+
+      .lt-imgt {
+        width: 100%;
+        height: 15rem;
+        border-radius: 10px;
+        margin-left: -1rem;
+        margin: 0 auto;
+      }
+
+      .lt-col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: inherit;
+        align-items: center;
+        margin: 1rem 0 2rem;
+      
+
+        .lt-t1 {
+          font-size: 2.5rem;
+          color: goldenrod;
+          margin: 1rem;
+        }
+        .lt-l1 {
+        font-size: 1rem;
+        color: white;
+      }
+      .lt-l2 {
+        font-size: 1rem;
+        color: white;
+        margin-bottom: 2rem;
+      }
+      }
+    }
+  }
+}
+

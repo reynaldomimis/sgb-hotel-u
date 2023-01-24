@@ -1,0 +1,29 @@
+.lt-title {
+  margin: 5.6rem 0 3rem;
+  width: 100%;
+  min-height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 2px;
+  text-align: center;
+
+  .lt-soto {
+    font-size: var(--sTxt-pri);
+    font-weight: 500;
+    color: #7294a8;
+    font-family: cursive;
+  }
+}
+
+@media only screen and (max-width: 758px) {
+  .lt-title {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 4rem 0 0.6rem;
+
+    .lt-soto {
+      font-size: 1.6rem;
+    }
+  }
+}

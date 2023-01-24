@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+.review {
+  width: 100%;
+  padding: 2rem 3rem;
+
+  .recard {
+    margin-top: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .review {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  .recard {
+    width: 100%;
+    padding: 0;
+    margin-top: 8px;
+  }
+}

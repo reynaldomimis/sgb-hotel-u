@@ -1,0 +1,38 @@
+.error-toast {
+  padding: 1rem 1rem;
+  line-height: 2px;
+  max-width: 35rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 4px 6px 5px -3px rgba(226, 195, 195, 0.28);
+  -webkit-box-shadow: 4px 6px 5px -3px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 4px 6px 5px -3px rgba(0, 0, 0, 0.28);
+
+  .cancel {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.6rem;
+  }
+  .in {
+    display: flex;
+    flex-direction: row;
+  }
+  .out {
+    display: flex;
+    flex-direction: row;
+  }
+  .other {
+    display: flex;
+    flex-direction: row;
+  }
+
+  p {
+    font-size: 0.7rem;
+    font-weight: 400;
+
+    b {
+      font-size: 0.6rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

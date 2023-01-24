@@ -1,0 +1,76 @@
+.c-card {
+  width: 28%;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: -1px 1px 8px -3px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: -1px 1px 8px -3px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: -1px 1px 8px -3px rgba(0, 0, 0, 0.42);
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .c-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .c-pro {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+    }
+
+    .c-name {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 1rem;
+
+      .name {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .c-star {
+        margin: 8px -5px 5px;
+      }
+
+      .time {
+        font-size: 0.7rem;
+        font-weight: 400;
+      }
+    }
+  }
+  .c-bottom {
+    .cc-content {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .c-card {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #fff;
+    border-radius: 3px;
+
+    .c-top {
+      .c-name {
+        .name {
+          font-size: 0.9rem;
+        }
+
+        .time {
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .c-bottom {
+      .cc-content {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

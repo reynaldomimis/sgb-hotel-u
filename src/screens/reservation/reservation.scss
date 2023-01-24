@@ -1,0 +1,127 @@
+.reserv {
+  width: 100%;
+  min-height: 100vh;
+
+  .bc-cal {
+    min-width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    margin-top: 7rem;
+    overflow: hidden;
+
+    .bc-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      min-height: 7rem;
+      background-color: rgb(237, 237, 237);
+      width: 90%;
+      margin: 0 auto;
+      padding: 1rem;
+
+      .d-col {
+        background-color: white;
+        width: 30rem;
+        border: none;
+        padding: 1rem;
+      }
+
+      .bc-left {
+        margin: 0 1rem 0 3rem;
+      }
+    }
+
+    .bc-fiat {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 90%;
+      min-height: 5rem;
+      background-color: #fafafa;
+      margin: 0 auto;
+
+      .bc-form {
+        margin-right: 2rem;
+        background-color: white;
+        height: inherit;
+      }
+    }
+  }
+
+  li {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .a-row {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .reserv {
+    .bc-cal {
+      width: 100%;
+      height: auto;
+
+      .bc-row {
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 0 auto;
+
+        .d-col {
+          background-color: white;
+          border: none;
+          margin: 0 auto;
+        }
+
+        .bc-left {
+          margin: 1rem 0 0 0rem;
+        }
+      }
+
+      .bc-fiat {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        min-height: 5rem;
+        background-color: #fafafa;
+        margin: 0 auto;
+
+        .bc-form {
+          margin-right: 2rem;
+          background-color: white;
+          height: inherit;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .reserv {
+    padding: 8px;
+    .bc-cal {
+      .bc-row {
+        width: 100%;
+        .d-col {
+          width: 100%;
+        }
+
+        .bc-left {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

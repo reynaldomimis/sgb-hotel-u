@@ -1,0 +1,34 @@
+.shadow {
+  margin-top: 5rem;
+  width: 100%;
+
+  .flex-wrap {
+    .cf-logo {
+      .cf-img {
+        width: 250px;
+      }
+    }
+    .tf-row {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .shadow {
+    width: 100%;
+
+    .flex-wrap {
+      .cf-logo {
+        .cf-img {
+          width: 100%;
+        }
+      }
+      .tf-row {
+        margin: 1rem 0 0;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

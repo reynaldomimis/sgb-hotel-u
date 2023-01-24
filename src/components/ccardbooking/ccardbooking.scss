@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Great+Vibes&family=Nunito:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+.cb-wrapper {
+  width: 100%;
+  min-height: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  .c-booking {
+    width: 35rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) url("https://i.ibb.co/Cz3FVkY/pic7.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 25rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-blend-mode: darken;
+    margin-right: 1rem;
+
+    .c-content {
+      margin-left: 4rem;
+      width: 100%;
+
+      .c-title {
+        font-size: var(--sTxt-pri);
+        color: #fff;
+        font-weight: 500;
+        font-family: "Alkalami", serif;
+        letter-spacing: 1px;
+      }
+      .c-price {
+        color: #fff;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        font-size: var(--sTxt-ter);
+        font-family: "Nunito", sans-serif;
+      }
+
+      .cb-btn {
+        border: 1px solid #fff;
+        margin-bottom: 3rem;
+        width: 11rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.9rem 0;
+        border-radius: 3px;
+        cursor: pointer;
+
+        .cb-label {
+          font-size: 1rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #fff;
+          font-family: "Nunito", sans-serif;
+          cursor: pointer;
+        }
+
+        &:hover {
+          background-color: #fff;
+
+          .cb-label {
+            color: black;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .c-booking2 {
+    width: 35rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7) url("https://i.ibb.co/vzdWj5d/pic10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 25rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-blend-mode: darken;
+    margin-right: 1rem;
+
+    .c-content {
+      margin-left: 4rem;
+      width: 100%;
+
+      .c-title {
+        font-size: var(--sTxt-pri);
+        color: #fff;
+        font-weight: 500;
+        font-family: "Alkalami", serif;
+        letter-spacing: 1px;
+      }
+      .c-price {
+        color: #fff;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        font-size: var(--sTxt-ter);
+        font-family: "Nunito", sans-serif;
+      }
+
+      .cb-btn {
+        border: 1px solid #fff;
+        margin-bottom: 3rem;
+        width: 11rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.9rem 0;
+        border-radius: 3px;
+        cursor: pointer;
+
+        .cb-label {
+          font-size: 1rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          color: #fff;
+          font-family: "Nunito", sans-serif;
+          cursor: pointer;
+        }
+
+        &:hover {
+          background-color: #fff;
+
+          .cb-label {
+            color: black;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .cb-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+
+    .c-booking {
+      margin: 0.5rem 0;
+      width: 100%;
+      min-height: 18rem;
+
+      .c-content {
+        .c-title {
+          font-size: 2.3rem;
+        }
+
+        .c-price {
+          font-size: 0.9rem;
+          margin-top: 0.2rem;
+          margin-bottom: 3rem;
+        }
+        .cb-btn {
+          height: 2.6rem;
+          width: 9rem;
+          margin-left: 1rem;
+
+          .cb-label {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .c-booking2 {
+      margin: 0.5rem 0;
+      width: 100%;
+      min-height: 18rem;
+
+      .c-content {
+        .c-title {
+          font-size: 2.3rem;
+        }
+
+        .c-price {
+          font-size: 0.9rem;
+          margin-top: 0.2rem;
+          margin-bottom: 2rem;
+        }
+        .cb-btn {
+          height: 2.6rem;
+          width: 9rem;
+          margin-left: 1rem;
+
+          .cb-label {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

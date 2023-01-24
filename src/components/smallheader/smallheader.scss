@@ -1,0 +1,60 @@
+.sh-title {
+  min-width: 14rem;
+  min-height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  padding-bottom: 3rem;
+  margin: 4rem 0 0 4rem;
+
+  .sh-soto {
+    font-size: 3.6rem;
+    font-weight: 500;
+    color: #7294a8;
+    font-family: cursive;
+    text-align: center;
+  }
+}
+
+.sh-title2 {
+  min-width: 14rem;
+  min-height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  padding-bottom: 1rem;
+  margin: 9rem 0 3rem 4rem;
+
+  .sh-soto {
+    font-size: var(--sTxt-pri);
+    font-weight: 500;
+    color: #7294a8;
+    font-family: cursive;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .sh-title {
+    width: 100%;
+    margin: 1rem 0 1rem;
+    text-align: center;
+    .sh-soto {
+      margin-top: 2rem;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  .sh-title2 {
+    width: 100%;
+    margin: 7rem 0 1rem;
+    text-align: center;
+
+    .sh-soto {
+      margin-top: 1rem;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+}

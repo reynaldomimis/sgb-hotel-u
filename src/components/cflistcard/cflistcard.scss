@@ -1,0 +1,33 @@
+.cf-lict {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+
+  .cf-content {
+    width: 90%;
+
+
+    .cf-t1 {
+      font-size: 1.3rem;
+    }
+
+    .cf-nav {
+      margin: 1rem 0;
+    }
+
+    .cf-t2 {
+      font-size: 1.3rem;
+    }
+
+    .cf-nav2 {
+      margin: 1rem 0;
+    }
+
+    .cf-p2 {
+      margin: 2rem 0;
+    }
+  }
+}
