@@ -9,7 +9,7 @@ import { BuildingList, RoomList } from "../../contexts/ImageList";
 const Gallery = () => {
   return (
     <>
-      <HSwiper data="BuildingList" />
+      <HSwiper data="RoomList" />
       <div className="gallery">
         <SmallHeader
           title="Soto Grande Baguio Hotel - Gallery"

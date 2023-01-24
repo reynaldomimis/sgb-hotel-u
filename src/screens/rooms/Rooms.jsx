@@ -7,11 +7,10 @@ import CFooter from "../../components/cfooter/CFooter";
 import ListRooms from "../../components/listrooms/ListRooms";
 
 const Rooms = () => {
-
   return (
     <>
       <div className="r-fac">
-        <HSwiper data="PoolList" />
+        <HSwiper data="RoomList" />
         <LineTitle label="Soto Grande Baguio Hotel: Accomodation" />
         <div className="rc-lict">
           <div className="rc-content">
@@ -20,10 +19,14 @@ const Rooms = () => {
             <div className="r-navcol">
               <ul className="rc-nav">
                 {FlistRooms.map((item, i) => {
-                  return <li className="li" key={i}>{item}</li>;
+                  return (
+                    <li className="li" key={i}>
+                      {item}
+                    </li>
+                  );
                 })}
-              </ul>          
-                <ListRooms />          
+              </ul>
+              <ListRooms />
             </div>
           </div>
         </div>
