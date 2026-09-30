@@ -6,9 +6,9 @@
   .s-card1 {
     height: 100%;
     width: 100%;
-    background-color: goldenrod;
-    border: 2px groove goldenrod;
-    color: rgb(26, 26, 26);
+    background-color: var(--color-accent-warm);
+    border: 2px groove var(--color-accent-warm);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,22 +17,22 @@
     border-radius: 3px;
 
     .s-title {
-      font-size: 3rem;
+      font-size: var(--font-size-6xl);
       font-weight: 600;
     }
 
     .s-des {
       margin-top: 1.5rem;
-      font-size: 1.1rem;
+      font-size: var(--font-size-lg);
     }
   }
 
   .s-card2 {
     height: 100%;
     width: 100%;
-    background-color: #0d4c33;
-    border: 2px groove #0d4c33;
-    color: white;
+    background-color: var(--color-brand);
+    border: 2px groove var(--color-brand);
+    color: var(--color-surface);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,22 +41,22 @@
     border-radius: 3px;
 
     .s-title {
-      font-size: 3rem;
+      font-size: var(--font-size-6xl);
       font-weight: 600;
     }
 
     .s-des {
       margin-top: 1.5rem;
-      font-size: 1.1rem;
+      font-size: var(--font-size-lg);
     }
   }
 
   .s-card3 {
     height: 100%;
     width: 100%;
-    background-color: bisque;
-    border: 2px groove bisque;
-    color: black;
+    background-color: var(--color-accent-pale);
+    border: 2px groove var(--color-accent-pale);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,22 +65,22 @@
     border-radius: 3px;
 
     .s-title {
-      font-size: 3rem;
+      font-size: var(--font-size-6xl);
       font-weight: 600;
     }
 
     .s-des {
       margin-top: 1.5rem;
-      font-size: 1.1rem;
+      font-size: var(--font-size-lg);
     }
   }
 
   .s-card4 {
     height: 100%;
     width: 100%;
-    background-color: #f2b036;
-    border: 2px groove #f2b036;
-    color: white;
+    background-color: var(--color-accent);
+    border: 2px groove var(--color-accent);
+    color: var(--color-surface);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,22 +89,22 @@
     border-radius: 3px;
 
     .s-title {
-      font-size: 3rem;
+      font-size: var(--font-size-6xl);
       font-weight: 600;
     }
 
     .s-des {
       margin-top: 1.5rem;
-      font-size: 1.1rem;
+      font-size: var(--font-size-lg);
     }
   }
 
   .s-card5 {
     height: 100%;
     width: 100%;
-    background-color: #f3b493;
-    border: 2px groove #f3b493;
-    color: black;
+    background-color: var(--color-accent-soft);
+    border: 2px groove var(--color-accent-soft);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,13 +113,13 @@
     border-radius: 3px;
 
     .s-title {
-      font-size: 3rem;
+      font-size: var(--font-size-6xl);
       font-weight: 600;
     }
 
     .s-des {
       margin-top: 1.5rem;
-      font-size: 1.3rem;
+      font-size: var(--font-size-xl);
     }
   }
 }
@@ -142,13 +142,13 @@
       border-radius: 1px;
 
       .s-title {
-        font-size: 2.3rem;
+        font-size: var(--font-size-5xl);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1.5rem;
-        font-size: 1.5rem;
+        font-size: var(--font-size-2xl);
         margin: 0 3rem;
       }
     }
@@ -164,13 +164,13 @@
       padding: 0.4rem;
       border-radius: 1px;
       .s-title {
-        font-size: 2.3rem;
+        font-size: var(--font-size-5xl);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1.5rem;
-        font-size: 1.5rem;
+        font-size: var(--font-size-2xl);
         margin: 0 3rem;
       }
     }
@@ -186,13 +186,13 @@
       padding: 0.4rem;
       border-radius: 1px;
       .s-title {
-        font-size: 2.3rem;
+        font-size: var(--font-size-5xl);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1.5rem;
-        font-size: 1.5rem;
+        font-size: var(--font-size-2xl);
         margin: 0 3rem;
       }
     }
@@ -210,13 +210,13 @@
 
       .s-title {
         .s-title {
-          font-size: 2.3rem;
+          font-size: var(--font-size-5xl);
           font-weight: 600;
         }
 
         .s-des {
           margin-top: 1.5rem;
-          font-size: 1.5rem;
+          font-size: var(--font-size-2xl);
           margin: 0 3rem;
         }
       }
@@ -232,13 +232,13 @@
         padding: 0.4rem;
         border-radius: 1px;
         .s-title {
-          font-size: 2.3rem;
+          font-size: var(--font-size-5xl);
           font-weight: 600;
         }
 
         .s-des {
           margin-top: 1.5rem;
-          font-size: 1.5rem;
+          font-size: var(--font-size-2xl);
           margin: 0 3rem;
         }
       }
@@ -264,13 +264,13 @@
       border-radius: 1px;
 
       .s-title {
-        font-size: 2rem;
+        font-size: var(--font-size-4xl);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         margin: 0 1rem;
       }
     }
@@ -287,13 +287,13 @@
       border-radius: 1px;
 
       .s-title {
-        font-size: 2rem;
+        font-size: var(--font-size-4xl);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         margin: 0 1rem;
       }
     }
@@ -310,13 +310,13 @@
       border-radius: 1px;
 
       .s-title {
-        font-size: 2rem;
+        font-size: var(--font-size-4xl);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         margin: 0 1rem;
       }
     }
@@ -333,13 +333,13 @@
       border-radius: 1px;
 
       .s-title {
-        font-size: 2rem;
+        font-size: var(--font-size-4xl);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         margin: 0 1rem;
       }
     }
@@ -356,13 +356,13 @@
       border-radius: 1px;
 
       .s-title {
-        font-size: var(--sTxt-ter);
+        font-size: var(--font-size-lg);
         font-weight: 600;
       }
 
       .s-des {
         margin-top: 1rem;
-        font-size: var(--sTxt-cd);
+        font-size: var(--font-size-base);
         margin: 0 1rem;
       }
     }

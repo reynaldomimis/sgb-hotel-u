@@ -21,15 +21,18 @@ const ListRooms = () => {
     <>
       <div className="lt-wrapper">
         <ul className="ul">
-          {MenuRoomsType.map((item, i) => {
+          {MenuRoomsType.map((item) => {
             return (
-              <li
-                onClick={() =>
-                  getRoomTypeData(item.title, item.img, item.sqm, item.mGuest)
-                }
-                key={i}
-              >
-                {item.title}
+              <li key={item.title}>
+                <button
+                  type="button"
+                  className="lt-room-option"
+                  onClick={() =>
+                    getRoomTypeData(item.title, item.img, item.sqm, item.mGuest)
+                  }
+                >
+                  {item.title}
+                </button>
               </li>
             );
           })}
@@ -37,12 +40,12 @@ const ListRooms = () => {
 
         <div className="lt-row">
           {showInfo ? (
-            <img src={showIcon} alt="" className="lt-imgt" />
+            <img src={showIcon} alt={`${showTitle} room`} className="lt-imgt" />
           ) : (
             <img
-              src="https://res.cloudinary.com/dkbbweo5x/image/upload/v1665626267/sgbh_colection/pic6_pgsidz.jpg"
+              src={MenuRoomsType[0].img}
               className="lt-imgt"
-              alt=""
+              alt="Studio room"
             />
           )}
 

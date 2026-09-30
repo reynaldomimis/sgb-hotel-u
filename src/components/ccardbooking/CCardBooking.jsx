@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ccardbooking.scss";
 
 const CCardBooking = ({ bC2, bP2, bT2, bT1, bP1, bC1 }) => {
@@ -11,9 +12,9 @@ const CCardBooking = ({ bC2, bP2, bT2, bT1, bP1, bC1 }) => {
             <p className="c-price">
               price from <b>₱ {bP1}</b> per night
             </p>
-            <div className="cb-btn">
-              <span className="cb-label">Book Now</span>
-            </div>
+            <Link className="cb-btn" to="/reservation">
+              <span className="cb-label">View availability</span>
+            </Link>
           </div>
         </div>
         <div className={bC2}>
@@ -22,9 +23,9 @@ const CCardBooking = ({ bC2, bP2, bT2, bT1, bP1, bC1 }) => {
             <p className="c-price">
               price from <b>₱ {bP2}</b> per night
             </p>
-            <div className="cb-btn">
-              <span className="cb-label">Book Now</span>
-            </div>
+            <Link className="cb-btn" to="/reservation">
+              <span className="cb-label">View availability</span>
+            </Link>
           </div>
         </div>
       </div>

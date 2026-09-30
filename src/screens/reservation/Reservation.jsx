@@ -10,61 +10,58 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Moment from "moment";
+import dayjs from "dayjs";
+import { RoomList } from "../../contexts/ImageList";
 
 const Reservation = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-  const [getUnit, setGetUnit] = useState(0);
-  const [avail, setAvail] = useState(availDateList);
+  const [selectedUnits, setSelectedUnits] = useState({});
   const [fiat, setFiat] = useState("");
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
+    if (endDate && date && date > endDate) {
+      setEndDate("");
+    }
   };
 
   const handleEndDateChange = (date) => {
     setEndDate(date);
   };
 
-  const customStyles = {
-    calendarContainer: {
-      background: "none",
-    },
-    dayInRange: {
-      background: "blue",
-      color: "white",
-    },
-  };
   const handleChange = (e) => {
     setFiat(e.target.value);
   };
 
-  const onUnitChange = (e) => {
-    e.preventDefault();
-    setGetUnit(e.target.value);
+  const onUnitChange = (roomName) => (event) => {
+    setSelectedUnits((currentUnits) => ({
+      ...currentUnits,
+      [roomName]: event.target.value,
+    }));
   };
 
-  const getAmountTotal = (price) => {
-    return (price * getUnit).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  const getAmountTotal = (price, unitCount) => {
+    return (price * Number(unitCount || 0))
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, "$&,");
   };
 
-  const onHandleCancel = () => {
-    getAmountTotal();
-    setGetUnit("");
-    setStartDate("");
-    setEndDate("");
-    setAvail(
-      avail.map((item) => {
-        return { ...item, nGuests: "" };
-      })
-    );
+  const onHandleCancel = (roomName) => {
+    setSelectedUnits((currentUnits) => {
+      const remainingUnits = { ...currentUnits };
+      delete remainingUnits[roomName];
+      return remainingUnits;
+    });
   };
+
+  const formatDate = (date) =>
+    date ? dayjs(date).format("DD MMM YYYY") : "Select date";
 
   return (
     <>
       <div className="reserv">
-        <HSwiper />
+        <HSwiper images={RoomList} label="Hotel rooms" />
         <LineHeader title="Reservation" />
         <div className="bc-cal">
           <div className="bc-row">
@@ -73,9 +70,9 @@ const Reservation = () => {
                 selected={startDate}
                 onChange={handleStartDateChange}
                 placeholderText="Start Date"
+                minDate={new Date()}
                 startDate={startDate}
                 endDate={endDate}
-                customStyles={customStyles}
                 className="d-col"
                 selectsStart
               />
@@ -85,10 +82,10 @@ const Reservation = () => {
                 selected={endDate}
                 onChange={handleEndDateChange}
                 placeholderText="End Date"
+                minDate={startDate || new Date()}
                 startDate={startDate}
                 className="d-col"
                 endDate={endDate}
-                customStyles={customStyles}
                 selectsEnd
               />
             </div>
@@ -109,17 +106,17 @@ const Reservation = () => {
             </FormControl>
           </div>
         </div>
-        {avail.length > 0 &&
-          avail.map((item, i) => {
+        {availDateList.map((item) => {
+            const selectedUnit = selectedUnits[item.rBooked] || "";
             return (
               <Booking
-                key={i}
+                key={item.rBooked}
                 uriIMG={item.uriIMG}
                 rBooked={item.rBooked}
                 bedSize={item.bedSize}
                 dRooms={item.dRooms}
-                listAmenities={item.aminities.map((k, i) => {
-                  return <li key={i}>{k}</li>;
+                listAmenities={item.aminities.map((amenity) => {
+                  return <li key={amenity}>{amenity}</li>;
                 })}
                 cDate={item.cDate}
                 nGuests={item.nGuests}
@@ -128,19 +125,21 @@ const Reservation = () => {
                   .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
                 nUnits={item.nUnits.map((n) => {
                   return (
-                    <option value={n} key={i}>
+                    <option value={n} key={n}>
                       {n} rooms
                     </option>
                   );
                 })}
                 dBooked={item.rBooked}
                 dGuests={`${item.nGuests} adults`}
-                rooms={`${getUnit} rooms`}
-                onUnit={onUnitChange}
-                dAmount={getAmountTotal(item.amount)}
-                onCancelBooking={onHandleCancel}
-                checkIn={Moment(startDate).format("DD-MM-YYYY")}
-                checkOut={Moment(endDate).format("DD-MM-YYYY")}
+                rooms={selectedUnit ? `${selectedUnit} rooms` : "Not selected"}
+                selectedUnit={selectedUnit}
+                onUnit={onUnitChange(item.rBooked)}
+                dAmount={getAmountTotal(item.amount, selectedUnit)}
+                onCancelBooking={() => onHandleCancel(item.rBooked)}
+                checkIn={formatDate(startDate)}
+                checkOut={formatDate(endDate)}
+                isBookable={Boolean(startDate && endDate && selectedUnit)}
               />
             );
           })}

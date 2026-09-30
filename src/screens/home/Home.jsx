@@ -3,7 +3,8 @@ import "./home.scss";
 import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import dayjs from "dayjs";
 import HCardRooms from "../../components/hcardrooms/HCardRooms";
 import HCardList from "../../contexts/HCardList";
 import CCardBooking from "../../components/ccardbooking/CCardBooking";
@@ -15,8 +16,8 @@ import CFooter from "../../components/cfooter/CFooter";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [startDate, setStartDate] = useState(new Date("2022/02/15"));
-  const [endDate, setEndDate] = useState(new Date("2022/02/26"));
+  const [startDate, setStartDate] = useState(dayjs());
+  const [endDate, setEndDate] = useState(dayjs().add(1, "day"));
 
   return (
     <>
@@ -25,8 +26,8 @@ const Home = () => {
           <div data-aos="fade-right" className="h-brow">
             <div className="h-left">
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DateTimePicker
-                  label="Start Date"
+                <DatePicker
+                  label="Check-in"
                   renderInput={(params) => <TextField {...params} />}
                   value={startDate}
                   onChange={(start) => {
@@ -37,11 +38,12 @@ const Home = () => {
             </div>
             <div className="h-center">
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DateTimePicker
+                <DatePicker
                   className="d-wrapper"
-                  label="End Date"
+                  label="Check-out"
                   renderInput={(params) => <TextField {...params} />}
                   value={endDate}
+                  minDate={startDate || undefined}
                   onChange={(end) => {
                     setEndDate(end);
                   }}
@@ -51,7 +53,6 @@ const Home = () => {
             <Link
               className="h-rights"
               to="/reservation"
-              style={{ textDecoration: "none" }}
             >
               <span className="d-book">BOOK NOW</span>
             </Link>
@@ -63,10 +64,10 @@ const Home = () => {
           <p className="h-p2">{hParags.p2}</p>
         </div>
         <div className="card-wrapper">
-          {HCardList.map((item, i) => {
+          {HCardList.map((item) => {
             return (
               <HCardRooms
-                key={i}
+                key={item.title}
                 src={item.icon}
                 title={item.title}
                 des={item.des}

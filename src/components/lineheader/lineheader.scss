@@ -5,12 +5,12 @@
   margin: 3rem 0 4rem;
 
   .lh-line {
-    background-color: orangered;
+    background-color: var(--color-accent-strong);
     height: 4px;
     min-width: 15%;
   }
   .lh-reserv {
-    font-size: var(--sTxt-pri);
+    font-size: var(--font-size-6xl);
     text-align: center;
     font-family: cursive;
   }
@@ -21,11 +21,11 @@
     margin: 10px 0 3rem;
 
     .lh-reserv {
-      font-size: 3rem;
+      font-size: var(--font-size-6xl);
     }
 
     .lh-line {
-      background-color: orangered;
+      background-color: var(--color-accent-strong);
       height: 4px;
       min-width: 30%;
     }

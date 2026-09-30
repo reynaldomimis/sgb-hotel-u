@@ -9,12 +9,12 @@ const Reviews = () => {
   return (
     <>
       <div className="review">
-        <SmallHeader title="Soto Grande Baguio - Feedbacks" cTitle="sh-title" />
+        <SmallHeader title="Soto Grande Baguio — Guest Reviews" cTitle="sh-title" />
         <div className="re-card">
-          {RData.map((item, index) => {
+          {RData.map((item) => {
             return (
               <Ccard
-                key={index}
+                key={item.name}
                 icon={item.icon}
                 name={item.name}
                 star={item.star}

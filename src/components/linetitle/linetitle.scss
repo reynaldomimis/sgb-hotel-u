@@ -9,9 +9,9 @@
   text-align: center;
 
   .lt-soto {
-    font-size: var(--sTxt-pri);
+    font-size: var(--font-size-6xl);
     font-weight: 500;
-    color: #7294a8;
+    color: var(--color-brand-muted);
     font-family: cursive;
   }
 }
@@ -23,7 +23,7 @@
     margin: 4rem 0 0.6rem;
 
     .lt-soto {
-      font-size: 1.6rem;
+      font-size: var(--font-size-2xl);
     }
   }
 }

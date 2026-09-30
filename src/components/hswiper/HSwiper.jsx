@@ -7,25 +7,20 @@ import "swiper/css/pagination";
 import { RoomList } from "../../contexts/ImageList";
 import "./hswiper.scss";
 
-const HSwiper = () => {
+const HSwiper = ({ images = RoomList, label = "Soto Grande Baguio gallery" }) => {
   return (
-    <>
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        style={{ marginBottom: "1rem" }}
-        className="mySwiper"
-        autoplay={{ delay: 2000 }}
-        pagination={{ clickable: true }}
-      >
-        {RoomList.map((item, i) => {
-          return (
-            <SwiperSlide className="sw-wrapper" key={i}>
-              <img src={item} alt="slider" className="sw-img" />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </>
+    <Swiper
+      modules={[Autoplay, Pagination]}
+      className="mySwiper hero-swiper"
+      autoplay={{ delay: 4000, disableOnInteraction: false }}
+      pagination={{ clickable: true }}
+    >
+      {images.map((item, index) => (
+        <SwiperSlide className="sw-wrapper" key={`${item}-${index}`}>
+          <img src={item} alt={`${label}, slide ${index + 1}`} className="sw-img" />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

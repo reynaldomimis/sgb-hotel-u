@@ -2,31 +2,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.2rem;
-  min-width: 8rem;
+  height: 2.8rem;
+  min-width: 13rem;
   margin-top: 2rem;
-  padding: 0 1rem;
+  padding: 0;
 
   .btn-book {
+    border: 0;
     height: inherit;
-    width: 8em;
-    background-color: rgb(255, 145, 0);
+    width: 100%;
+    padding: 0 1.5rem 0 2rem;
+    background-color: var(--color-accent);
     clip-path: polygon(14% 0, 100% 0, 100% 57%, 86% 100%, 0 100%, 0 46%);
     display: flex;
     justify-content: center;
     align-items: center;
 
     span {
-      color: #fff;
+      color: var(--color-on-brand);
       font-weight: 400;
-      font-size: 1rem;
+      font-size: var(--font-size-base);
+      line-height: 1.2;
+      text-align: center;
+      white-space: nowrap;
     }
 
     &:hover {
       transition: all 0.2s ease-in;
-      background-color: orangered;
+      background-color: var(--color-accent-strong);
       cursor: pointer;
       transform: translateX(10px);
+    }
+
+    &:disabled {
+      background-color: var(--color-border-strong);
+      cursor: not-allowed;
+      transform: none;
     }
   }
 }
@@ -36,30 +47,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2.2rem;
-  width: 10rem;
+  height: 2.8rem;
+  width: 13rem;
   margin-top: 2rem;
 
   .btn-book {
+    border: 0;
     height: inherit;
-    width: 8rem;
-    background-color: rgb(251, 22, 22);
+    width: 100%;
+    padding: 0 1.5rem 0 2rem;
+    background-color: var(--color-danger);
     clip-path: polygon(14% 0, 100% 0, 100% 57%, 86% 100%, 0 100%, 0 46%);
     display: flex;
     justify-content: center;
     align-items: center;
 
     span {
-      color: #fff;
+      color: var(--color-on-brand);
       font-weight: 400;
-      font-size: 1rem;
+      font-size: var(--font-size-base);
+      line-height: 1.2;
+      text-align: center;
+      white-space: nowrap;
     }
 
     &:hover {
       transition: all 0.2s ease-in;
-      background-color: orangered;
+      background-color: var(--color-accent-strong);
       cursor: pointer;
       transform: translateX(10px);
+    }
+
+    &:disabled {
+      background-color: var(--color-border-strong);
+      cursor: not-allowed;
+      transform: none;
     }
   }
 }
@@ -74,23 +96,24 @@
     margin: 2rem 0 0 2rem;
 
     .btn-book {
+      border: 0;
       height: inherit;
       width: 9rem;
-      background-color: rgb(255, 145, 0);
+      background-color: var(--color-accent);
       clip-path: polygon(14% 0, 100% 0, 100% 57%, 86% 100%, 0 100%, 0 46%);
       display: flex;
       justify-content: center;
       align-items: center;
 
       span {
-        color: #fff;
+        color: var(--color-on-brand);
         font-weight: 400;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
       }
 
       &:hover {
         transition: all 0.2s ease-in;
-        background-color: orangered;
+        background-color: var(--color-accent-strong);
         cursor: pointer;
         transform: translateX(10px);
       }
@@ -106,18 +129,19 @@
     margin-top: 0;
 
     .btn-book {
+      border: 0;
       height: inherit;
       width: 100%;
-      background-color: rgb(255, 145, 0);
+      background-color: var(--color-accent);
       clip-path: none;
       display: flex;
       justify-content: center;
       align-items: center;
 
       span {
-        color: #fff;
+        color: var(--color-on-brand);
         font-weight: 400;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
       }
     }
   }
@@ -131,18 +155,19 @@
     margin-top: 2px;
 
     .btn-book {
+      border: 0;
       height: inherit;
       width: 100%;
-      background-color: rgb(251, 22, 22);
+      background-color: var(--color-danger);
       clip-path: none;
       display: flex;
       justify-content: center;
       align-items: center;
 
       span {
-        color: #fff;
+        color: var(--color-on-brand);
         font-weight: 400;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
       }
     }
   }

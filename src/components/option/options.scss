@@ -10,8 +10,8 @@
   select {
     width: inherit;
     padding: 4px;
-    border: 1px solid lightgrey;
+    border: 1px solid var(--color-border-strong);
     outline: none;
-    background-color: white;
+    background-color: var(--color-surface);
   }
 }

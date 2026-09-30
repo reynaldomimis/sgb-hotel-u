@@ -5,12 +5,13 @@ import TextArea from "../../components/textarea/TextArea";
 import Icon from "../../images/con1.png";
 import Modal from "react-bootstrap/Modal";
 import PhoneInput from "react-phone-number-input";
-import emailjs from "@emailjs/browser";
 import CButton from "../../components/buttons/CButton";
 
 const Contact = () => {
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(!show);
+  const [formStatus, setFormStatus] = useState(null);
+  const openMap = () => setShow(true);
+  const closeMap = () => setShow(false);
   const [phone, setPhone] = useState();
   const [info, setInfo] = useState({
     label: "",
@@ -23,54 +24,32 @@ const Contact = () => {
   const { label, fullname, gmail, nationality, message } = info;
 
   const onHandleChange = (e) => {
-    e.preventDefault();
     const { name, value } = e.target;
     setInfo({
       ...info,
       [name]: value,
     });
+    setFormStatus(null);
   };
 
-  const clientParams = {
-    gmail: gmail,
-    area: message,
-    label: label,
-    fullname: fullname,
-    nationality: nationality,
-    phone: phone,
-  };
+  const submitMockInquiry = () => {
+    if (!label || !fullname.trim() || !gmail.trim() || !nationality || !message.trim()) {
+      setFormStatus({
+        type: "error",
+        message: "Please complete the required fields to preview the inquiry flow.",
+      });
+      return;
+    }
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .send(
-        `${process.env.REACT_APP_SERVICE}`,
-        `${process.env.REACT_APP_TEMPLATE}`,
-        clientParams,
-        `${process.env.REACT_APP_PUBLIC_KEY}`
-      )
-      .then(
-        () => {
-          setInfo({
-            label: "",
-            fullname: "",
-            gmail: "",
-            nationality: "",
-            message: "",
-          });
-          setPhone();
-        },
-
-        (error) => {
-          alert(error.text);
-        }
-      );
+    setFormStatus({
+      type: "success",
+      message: "Demo inquiry recorded in this browser only. No email or personal data was sent.",
+    });
   };
 
   return (
     <>
-      <Modal show={show} onHide={handleShow} animation={true}>
+      <Modal show={show} onHide={closeMap} animation>
         <Modal.Header closeButton>
           <Modal.Title>Location</Modal.Title>
         </Modal.Header>
@@ -79,11 +58,11 @@ const Contact = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.2143238978374!2d120.60451601476531!3d16.413937934467665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391a16d96de80eb%3A0xc315bf4508f1d638!2sSotogrande%20Baguio%20by%20Sta.%20Lucia!5e0!3m2!1sen!2sph!4v1664686951756!5m2!1sen!2sph"
             width="100%"
             height="450"
-            frameborder="0"
-            style={{ border: 0 }}
-            allowfullscreen=""
+            frameBorder="0"
+            className="map-frame"
+            allowFullScreen
             aria-hidden="false"
-            tabindex="0"
+            tabIndex="0"
             title="Soto Grande Baguio"
           />
         </Modal.Body>
@@ -92,12 +71,14 @@ const Contact = () => {
         <div className="main-slider">
           <div className="contact">
             <div className="left-content">
-              <img src={Icon} alt="" className="con" />
+              <img src={Icon} alt="Soto Grande Baguio contact desk" className="con" />
               <p>
                 <b>Address:</b> Leonard Wood Rd, Baguio City, Philippines, 2600
               </p>
-              <p onClick={handleShow}>
-                <b className="view">Click here</b> to view our location
+              <p>
+                <button type="button" className="view" onClick={openMap}>
+                  View the map
+                </button>
               </p>
               <p className="mob">
                 <b>Mobile Number:</b> 0916 311 9388
@@ -125,7 +106,6 @@ const Contact = () => {
                     value={fullname}
                     type="text"
                     name="fullname"
-                    style={{ textTransform: "uppercase" }}
                     onChange={onHandleChange}
                   />
                 </div>
@@ -160,11 +140,12 @@ const Contact = () => {
                 value={message}
                 onChange={onHandleChange}
               />
-              <CButton
-                bName="book-wrapper "
-                label="Submit"
-                onClick={sendEmail}
-              />
+              {formStatus && (
+                <p className={`form-status form-status--${formStatus.type}`} role="status">
+                  {formStatus.message}
+                </p>
+              )}
+              <CButton bName="book-wrapper" label="Submit demo inquiry" onClick={submitMockInquiry} />
             </div>
           </div>
         </div>

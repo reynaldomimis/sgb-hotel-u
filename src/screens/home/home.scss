@@ -1,22 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-
 .home {
   width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(
     to right top,
-    #ffffff,
-    #fffeff,
-    #fffdfd,
-    #fffdf9,
-    #fffef6
+    var(--color-surface),
+    var(--color-surface),
+    var(--color-surface),
+    var(--color-surface),
+    var(--color-surface)
   );
   margin: 0 auto;
 
   .h-main {
-    background: url("https://i.ibb.co/9nD5LKx/pic1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background:
+      linear-gradient(var(--color-scrim), var(--color-scrim)),
+      url("https://i.ibb.co/9nD5LKx/pic1.jpg") center / cover no-repeat;
     min-height: 25rem;
     text-align: center;
     display: flex;
@@ -35,7 +33,7 @@
       align-items: center;
       padding: 1rem 3rem;
       gap: 5px;
-      background-color: #fff;
+      background-color: var(--color-on-brand);
       border-radius: 5px;
 
       .h-left {
@@ -44,14 +42,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.22);
+        background: var(--color-glass);
         border-radius: 5px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 30px var(--color-shadow);
         backdrop-filter: blur(0.8px);
         -webkit-backdrop-filter: blur(0.8px);
-        box-shadow: -13px -13px 43px -63px rgba(255, 255, 255, 0.83);
-        -webkit-box-shadow: -13px -13px 43px -63px rgba(255, 255, 255, 0.83);
-        -moz-box-shadow: -13px -13px 43px -63px rgba(255, 255, 255, 0.83);
+        box-shadow: -13px -13px 43px -63px var(--color-glass-highlight);
+        -webkit-box-shadow: -13px -13px 43px -63px var(--color-glass-highlight);
+        -moz-box-shadow: -13px -13px 43px -63px var(--color-glass-highlight);
       }
       .h-center {
         height: auto;
@@ -59,37 +57,38 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.22);
+        background: var(--color-glass);
         border-radius: 5px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 30px var(--color-shadow);
         backdrop-filter: blur(0.8px);
         -webkit-backdrop-filter: blur(0.8px);
-        box-shadow: -13px -13px 43px -63px rgba(255, 255, 255, 0.83);
-        -webkit-box-shadow: -13px -13px 43px -63px rgba(255, 255, 255, 0.83);
-        -moz-box-shadow: -13px -13px 43px -63px rgba(255, 255, 255, 0.83);
+        box-shadow: -13px -13px 43px -63px var(--color-glass-highlight);
+        -webkit-box-shadow: -13px -13px 43px -63px var(--color-glass-highlight);
+        -moz-box-shadow: -13px -13px 43px -63px var(--color-glass-highlight);
 
         .d-wrapper {
-          color: #fff;
+          color: var(--color-on-brand);
         }
       }
       .h-rights {
+        text-decoration: none;
         width: 14rem;
         min-height: 3.5rem;
-        background-color: orange;
+        background-color: var(--color-accent);
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 2px;
 
         .d-book {
-          font-size: 1.4rem;
+          font-size: var(--font-size-2xl);
           font-weight: 500;
-          color: #fff;
+          color: var(--color-on-brand);
         }
 
         &:hover {
           transition: all 0.2s ease-in;
-          background-color: orangered;
+          background-color: var(--color-accent-strong);
           cursor: pointer;
           transform: translateX(10px);
         }
@@ -100,7 +99,7 @@
   .h-p-wrapper {
     width: 80%;
     min-height: 10rem;
-    background-color: aliceblue;
+    background-color: var(--color-surface-tint);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,10 +110,10 @@
 
     .h-p1 {
       margin: 2rem 0;
-      font-size: var(--sTxt-ter);
+      font-size: var(--font-size-lg);
     }
     .h-p2 {
-      font-size: var(--sTxt-ter);
+      font-size: var(--font-size-lg);
     }
   }
 
@@ -139,14 +138,14 @@
       }
 
       .cf-title {
-        color: #7294a8;
-        font-family: "Great Vibes", cursive;
-        font-size: var(--sTxt-sec);
+        color: var(--color-brand-muted);
+        font-family: var(--font-family-display);
+        font-size: var(--font-size-2xl);
         text-align: center;
         margin-top: 2rem;
       }
       .cf-des {
-        font-size: var(--sTxt-cd);
+        font-size: var(--font-size-base);
         text-align: center;
       }
     }
@@ -181,7 +180,7 @@
           min-height: 3rem;
 
           .d-book {
-            font-size: 1rem;
+            font-size: var(--font-size-base);
             font-weight: 500;
           }
         }
@@ -191,7 +190,7 @@
       width: 100%;
       height: inherit;
       margin: 0;
-      font-size: var(--r-txt-des);
+      font-size: var(--font-size-base);
     }
     .card-wrapper {
       display: flex;
@@ -215,10 +214,10 @@
         }
 
         .cf-title {
-          font-size: 1.8rem;
+          font-size: var(--font-size-3xl);
         }
         .cf-des {
-          font-size: var(--sTxt-cd);
+          font-size: var(--font-size-base);
         }
       }
     }

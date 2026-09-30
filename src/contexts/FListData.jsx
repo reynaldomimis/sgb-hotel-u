@@ -3,8 +3,8 @@ const FlistData = {
   p2: `For group events, the hotel accommodation in Baguio City has a catering menu that fits various occasions.`,
   mt1: `For Meetings and Events`,
   dt1: `For Dining and Recreation`,
-  rp1: `Find retreat in the 64 rooms of this accommodation in Quezon City. Decked in soothing colors, the design creates a most restful ambience.`,
-  rp2: `Each of the Studio, Deluxe Room, and 1 and 2 Bedroom Suites in this hotel in Quezon City offers comfort and privacy, and comes complete with amenities the modern traveler requires.`
+  rp1: `Find a relaxing retreat in the rooms at Soto Grande Baguio. Designed in calming tones, each space is presented as a comfortable base for exploring the City of Pines.`,
+  rp2: `The Studio, Deluxe Room, and one- and two-bedroom suites are showcased with the comfort, privacy, and everyday amenities modern travelers look for.`
 };
 
 const FlistMeeting = [

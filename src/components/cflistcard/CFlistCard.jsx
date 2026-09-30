@@ -11,9 +11,9 @@ const CFlistCard = () => {
                   <span className='cf-t1'>{ FlistData.mt1 }</span>
                   <ul className='cf-nav'>
                       {
-                          FlistMeeting.map((item, i) => {
+                          FlistMeeting.map((item) => {
                               return (
-                                  <li key={i}>{item}</li>
+                                  <li key={item}>{item}</li>
                             )
                         })  
                   }
@@ -21,9 +21,9 @@ const CFlistCard = () => {
                  <span className='cf-t2'>{ FlistData.dt1 }</span>
                     <ul className='cf-nav2'>
                       {
-                          FlistDining.map((item, i) => {
+                          FlistDining.map((item) => {
                               return (
-                                  <li key={i}>{item}</li>
+                                  <li key={item}>{item}</li>
                             )
                         })  
                         }

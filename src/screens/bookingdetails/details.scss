@@ -3,24 +3,24 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: lightgray;
+  background-color: var(--color-surface-subtle);
 
   .wrapper {
     width: 90%;
-    background-color: white;
+    background-color: var(--color-surface);
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
 
     .title {
-      font-size: 1rem;
+      font-size: var(--font-size-base);
       font-weight: 600;
       margin: 1rem 3px;
     }
 
     .logo {
-      border-bottom: 1px solid lightgrey;
+      border-bottom: 1px solid var(--color-border-strong);
       padding-bottom: 4rem;
       margin-top: 6rem;
       width: 100%;
@@ -43,13 +43,13 @@
       .check-wrapper {
         display: flex;
         flex-direction: column;
-        background-color: #fafafa;
+        background-color: var(--color-surface-raised);
         padding: 1rem 2rem;
         gap: 10px;
 
         .travel {
-          color: rgb(56, 56, 255);
-          font-size: 15px;
+          color: var(--color-info);
+          font-size: var(--font-size-md);
 
           cursor: pointer;
         }
@@ -58,7 +58,7 @@
           text-decoration: none;
 
           &:hover {
-            color: red;
+            color: var(--color-danger);
           }
         }
       }
@@ -78,14 +78,14 @@
         gap: 10px;
         width: 100%;
         justify-content: space-between;
-        background-color: #fafafa;
+        background-color: var(--color-surface-raised);
         padding: 2rem 2rem 2rem 0;
 
         select {
           padding: 5px;
-          border: 1px solid lightgrey;
+          border: 1px solid var(--color-border-strong);
           outline: none;
-          background-color: white;
+          background-color: var(--color-surface);
           width: 100%;
         }
 
@@ -96,8 +96,8 @@
           gap: 10px;
 
           .icon {
-            font-size: 1.1rem;
-            color: gray;
+            font-size: var(--font-size-lg);
+            color: var(--color-text-subtle);
           }
         }
 
@@ -109,16 +109,16 @@
           gap: 10px;
 
           .room {
-            font-size: 1.2rem;
+            font-size: var(--font-size-xl);
             font-weight: bold;
           }
           .cancel {
-            font-size: 1rem;
-            color: green;
+            font-size: var(--font-size-base);
+            color: var(--color-brand);
           }
 
           .adults {
-            font-size: 1rem;
+            font-size: var(--font-size-base);
           }
         }
 
@@ -156,9 +156,9 @@
 
           select {
             padding: 5px;
-            border: 1px solid lightgrey;
+            border: 1px solid var(--color-border-strong);
             outline: none;
-            background-color: white;
+            background-color: var(--color-surface);
             width: 100%;
           }
         }
@@ -176,9 +176,9 @@
 
             select {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
               width: 100%;
             }
           }
@@ -191,9 +191,9 @@
 
             select {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
               width: 100%;
             }
           }
@@ -207,7 +207,7 @@
 
           .amount {
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: var(--font-size-xl);
           }
 
           .n-wrapper {
@@ -234,12 +234,12 @@
         height: inherit;
 
         .titleh {
-          font-size: 1rem;
+          font-size: var(--font-size-base);
           font-weight: 600;
         }
 
         .ctop {
-          background-color: #fafafa;
+          background-color: var(--color-surface-raised);
           padding: 1rem;
           display: flex;
           flex-direction: column;
@@ -251,7 +251,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid lightgrey;
+            border-bottom: 1px solid var(--color-border-strong);
           }
           .row2 {
             display: flex;
@@ -262,13 +262,13 @@
 
           .taxes {
             margin-left: 8px;
-            font-size: 14px;
+            font-size: var(--font-size-sm);
           }
         }
         .ccenter {
           margin: 1rem 0;
           gap: 1px;
-          background-color: #fafafa;
+          background-color: var(--color-surface-raised);
           padding: 1rem;
           line-height: 5px;
 
@@ -287,7 +287,7 @@
         }
         .cbottom {
           gap: 10px;
-          background-color: #fafafa;
+          background-color: var(--color-surface-raised);
           padding: 1rem;
           display: flex;
           flex-direction: column;
@@ -296,16 +296,16 @@
 
           .title {
             padding-left: 1rem;
-            border-left: 5px solid lightgray;
+            border-left: 5px solid var(--color-surface-subtle);
           }
 
           .t1 {
-            font-size: 1rem;
+            font-size: var(--font-size-base);
             font-weight: 400;
             padding-left: 1.5rem;
 
             b {
-              font-size: 0.9rem;
+              font-size: var(--font-size-md);
               font-weight: 600;
             }
           }
@@ -317,7 +317,7 @@
         padding: 1rem 1.4rem;
 
         .ctop {
-          background-color: #fafafa;
+          background-color: var(--color-surface-raised);
           padding: 1rem;
           display: flex;
           flex-direction: column;
@@ -343,9 +343,9 @@
             select {
               width: 100%;
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
             }
           }
           .col2 {
@@ -357,9 +357,9 @@
 
             input {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
               width: 100%;
             }
           }
@@ -372,9 +372,9 @@
 
             input {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
               width: 100%;
             }
           }
@@ -395,9 +395,9 @@
 
             input {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
               width: 100%;
             }
           }
@@ -410,9 +410,9 @@
 
             input {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
               width: 100%;
             }
           }
@@ -434,12 +434,12 @@
 
             .inputs {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
               width: 100%;
               outline: none;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
 
               input {
                 border: none;
@@ -457,9 +457,9 @@
 
           textarea {
             padding: 5px;
-            border: 1px solid lightgrey;
+            border: 1px solid var(--color-border-strong);
             outline: none;
-            background-color: white;
+            background-color: var(--color-surface);
           }
 
           .add {
@@ -475,16 +475,16 @@
 
           .row5 {
             margin-top: 1.5rem;
-            font-size: 1rem;
+            font-size: var(--font-size-base);
             padding: 2rem 0;
 
             span {
-              font-size: 1rem;
+              font-size: var(--font-size-base);
               font-weight: 600;
             }
 
             .wrapper2 {
-              background-color: #fafafa;
+              background-color: var(--color-surface-raised);
               width: 100%;
               min-height: 28rem;
               margin-top: 1rem;
@@ -492,12 +492,12 @@
               .col1 {
                 width: 95%;
                 margin: 0 auto;
-                border-bottom: 1px solid lightgrey;
+                border-bottom: 1px solid var(--color-border-strong);
                 padding: 2rem 0 10px;
                 margin-bottom: 2rem;
 
                 p {
-                  color: black;
+                  color: var(--color-text);
                   line-height: 1.5rem;
                 }
               }
@@ -527,7 +527,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: orangered;
+                background-color: var(--color-accent-strong);
                 margin-left: 2rem;
                 margin-top: 2rem;
                 flex-direction: row;
@@ -537,19 +537,20 @@
                 outline: none;
 
                 .icon {
-                  color: white;
-                  font-size: 1.5rem;
+                  color: var(--color-surface);
+                  font-size: var(--font-size-2xl);
                   margin-right: 0.7rem;
                 }
-                h5 {
-                  color: white;
+                h5,
+                span {
+                  color: var(--color-surface);
                   font-weight: 600;
-                  font-size: 1.2rem;
+                  font-size: var(--font-size-xl);
                   margin-top: 10px;
                 }
 
                 &:hover {
-                  background-color: orange;
+                  background-color: var(--color-accent);
                 }
               }
             }
@@ -576,7 +577,7 @@
           padding: 0;
           gap: 10px;
           width: 100%;
-          background-color: #fafafa;
+          background-color: var(--color-surface-raised);
 
           .n-wrapper {
             display: flex;
@@ -586,8 +587,8 @@
             width: 100%;
 
             .icon {
-              font-size: 1.1rem;
-              color: gray;
+              font-size: var(--font-size-lg);
+              color: var(--color-text-subtle);
             }
           }
 
@@ -599,16 +600,16 @@
             width: 100%;
 
             .room {
-              font-size: 1.2rem;
+              font-size: var(--font-size-xl);
               font-weight: bold;
             }
             .cancel {
-              font-size: 14px;
-              color: green;
+              font-size: var(--font-size-sm);
+              color: var(--color-brand);
             }
 
             .adults {
-              font-size: 1rem;
+              font-size: var(--font-size-base);
             }
           }
 
@@ -663,7 +664,7 @@
 
             .amount {
               font-weight: bold;
-              font-size: 1.3rem;
+              font-size: var(--font-size-xl);
             }
 
             .n-wrapper {
@@ -685,12 +686,12 @@
           height: inherit;
 
           .titleh {
-            font-size: 1rem;
+            font-size: var(--font-size-base);
             font-weight: 600;
           }
 
           .ctop {
-            background-color: #fafafa;
+            background-color: var(--color-surface-raised);
             padding: 1rem;
             display: flex;
             flex-direction: column;
@@ -702,7 +703,7 @@
               flex-direction: row;
               justify-content: space-between;
               align-items: center;
-              border-bottom: 1px solid lightgrey;
+              border-bottom: 1px solid var(--color-border-strong);
             }
             .row2 {
               display: flex;
@@ -713,13 +714,13 @@
 
             .taxes {
               margin-left: 8px;
-              font-size: 14px;
+              font-size: var(--font-size-sm);
             }
           }
           .ccenter {
             margin: 1rem 0;
             gap: 1px;
-            background-color: #fafafa;
+            background-color: var(--color-surface-raised);
             padding: 1rem;
             line-height: 5px;
 
@@ -738,7 +739,7 @@
           }
           .cbottom {
             gap: 10px;
-            background-color: #fafafa;
+            background-color: var(--color-surface-raised);
             padding: 1rem;
             display: flex;
             flex-direction: column;
@@ -746,16 +747,16 @@
 
             .title {
               padding-left: 1rem;
-              border-left: 5px solid lightgray;
+              border-left: 5px solid var(--color-surface-subtle);
             }
 
             .t1 {
-              font-size: 1rem;
+              font-size: var(--font-size-base);
               font-weight: 400;
               padding-left: 1.5rem;
 
               b {
-                font-size: 0.9rem;
+                font-size: var(--font-size-md);
                 font-weight: 600;
               }
             }
@@ -767,7 +768,7 @@
           padding: 0;
 
           .ctop {
-            background-color: #fafafa;
+            background-color: var(--color-surface-raised);
             padding: 1rem;
             display: flex;
             flex-direction: column;
@@ -793,9 +794,9 @@
                 width: 100%;
                 width: inherit;
                 padding: 5px;
-                border: 1px solid lightgrey;
+                border: 1px solid var(--color-border-strong);
                 outline: none;
-                background-color: white;
+                background-color: var(--color-surface);
               }
             }
             .col2 {
@@ -807,9 +808,9 @@
 
               input {
                 padding: 5px;
-                border: 1px solid lightgrey;
+                border: 1px solid var(--color-border-strong);
                 outline: none;
-                background-color: white;
+                background-color: var(--color-surface);
                 width: 100%;
               }
             }
@@ -822,9 +823,9 @@
 
               input {
                 padding: 5px;
-                border: 1px solid lightgrey;
+                border: 1px solid var(--color-border-strong);
                 outline: none;
-                background-color: white;
+                background-color: var(--color-surface);
                 width: 100%;
               }
             }
@@ -845,9 +846,9 @@
 
               input {
                 padding: 5px;
-                border: 1px solid lightgrey;
+                border: 1px solid var(--color-border-strong);
                 outline: none;
-                background-color: white;
+                background-color: var(--color-surface);
                 width: 100%;
               }
             }
@@ -860,9 +861,9 @@
 
               input {
                 padding: 5px;
-                border: 1px solid lightgrey;
+                border: 1px solid var(--color-border-strong);
                 outline: none;
-                background-color: white;
+                background-color: var(--color-surface);
                 width: 100%;
               }
             }
@@ -884,12 +885,12 @@
 
               .inputs {
                 padding: 5px;
-                border: 1px solid lightgrey;
+                border: 1px solid var(--color-border-strong);
                 outline: none;
-                background-color: white;
+                background-color: var(--color-surface);
                 width: 100%;
                 outline: none;
-                border: 1px solid lightgrey;
+                border: 1px solid var(--color-border-strong);
 
                 input {
                   border: none;
@@ -907,9 +908,9 @@
 
             textarea {
               padding: 5px;
-              border: 1px solid lightgrey;
+              border: 1px solid var(--color-border-strong);
               outline: none;
-              background-color: white;
+              background-color: var(--color-surface);
             }
 
             .add {
@@ -925,16 +926,16 @@
 
             .row5 {
               margin-top: 1.5rem;
-              font-size: 1rem;
+              font-size: var(--font-size-base);
               padding: 2rem 0;
 
               span {
-                font-size: 1rem;
+                font-size: var(--font-size-base);
                 font-weight: 600;
               }
 
               .wrapper2 {
-                background-color: #fafafa;
+                background-color: var(--color-surface-raised);
                 width: 100%;
                 min-height: 28rem;
                 margin-top: 1rem;
@@ -942,12 +943,12 @@
                 .col1 {
                   width: 95%;
                   margin: 0 auto;
-                  border-bottom: 1px solid lightgrey;
+                  border-bottom: 1px solid var(--color-border-strong);
                   padding: 2rem 0 10px;
                   margin-bottom: 2rem;
 
                   p {
-                    color: black;
+                    color: var(--color-text);
                     line-height: 1.5rem;
                   }
                 }
@@ -978,7 +979,7 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  background-color: orangered;
+                  background-color: var(--color-accent-strong);
                   margin-left: 2rem;
                   margin-top: 1rem;
                   flex-direction: row;
@@ -986,19 +987,20 @@
                   cursor: pointer;
 
                   .icon {
-                    color: white;
-                    font-size: 1.5rem;
+                    color: var(--color-surface);
+                    font-size: var(--font-size-2xl);
                     margin-right: 0.7rem;
                   }
-                  h5 {
-                    color: white;
+                  h5,
+                  span {
+                    color: var(--color-surface);
                     font-weight: 600;
-                    font-size: 1.2rem;
+                    font-size: var(--font-size-xl);
                     margin-top: 10px;
                   }
 
                   &:hover {
-                    background-color: orange;
+                    background-color: var(--color-accent);
                   }
                 }
               }

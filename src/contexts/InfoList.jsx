@@ -1,12 +1,12 @@
 const InfoList = [
   {
     title: "EDUCATION",
-    des: "Get quality education in nearby educational institutions such as University of Baguio and St. Louis UniversityGet quality education in nearby educational institutions such as University of Baguio and St. Louis University",
+    des: "Explore nearby learning institutions such as the University of Baguio and Saint Louis University.",
     cName: "s-card1",
   },
   {
     title: "HEALTH CARE",
-    des: "Hospitals such as St. Louis Hospital of the Sacred Heart and Notre Dame de Chartes Hospital are just a few minutes away.",
+    des: "Healthcare facilities such as Saint Louis Hospital of the Sacred Heart and Notre Dame de Chartres Hospital are within the city.",
     cName: "s-card2",
   },
   {
@@ -21,7 +21,7 @@ const InfoList = [
   },
   {
     title: "AVAILABILITY",
-    des: "Available through inquiry. Note that price, terms, discounts, and lot/unit availability are subject to change without prior notice.",
+    des: "Availability, rates, and booking terms shown in this portfolio are sample content for the frontend demonstration.",
     cName: "s-card5",
   },
 ];
@@ -39,16 +39,15 @@ const hParags = {
 
 const availDateList = [
   {
-    uriIMG:
-      "https://res.cloudinary.com/dkbbweo5x/image/upload/v1665626268/sgbh_colection/pic7_xywkjq.jpg",
+    uriIMG: "https://res.cloudinary.com/dkbbweo5x/image/upload/v1665626268/sgbh_colection/pic7_xywkjq.jpg",
     rBooked: "Deluxe Double 1",
     bedSize: 2,
     dRooms: 47,
     nUnits: [1, 2],
-    cDate: "November 3, 2022",
+    cDate: "the selected check-in date",
     nGuests: 2,
-    cIn: "Mon Oct 02",
-    cOut: "Mon Oct 03",
+    cIn: "Sample check-in",
+    cOut: "Sample check-out",
     amount: 3500,
     isBook: false,
     aminities: [
@@ -60,16 +59,15 @@ const availDateList = [
     ],
   },
   {
-    uriIMG:
-      "https://res.cloudinary.com/dkbbweo5x/image/upload/v1665626267/sgbh_colection/pic12_bhsguy.jpg",
+    uriIMG: "https://res.cloudinary.com/dkbbweo5x/image/upload/v1665626267/sgbh_colection/pic12_bhsguy.jpg",
     rBooked: "Deluxe Double 2",
     bedSize: 2,
     dRooms: 47,
     nUnits: [1, 2, 3],
-    cDate: "November 3, 2022",
+    cDate: "the selected check-in date",
     nGuests: 4,
-    cIn: "Tues Oct 03",
-    cOut: "Tues Oct 04",
+    cIn: "Sample check-in",
+    cOut: "Sample check-out",
     amount: 3500,
     isBook: false,
     aminities: [
@@ -81,16 +79,15 @@ const availDateList = [
     ],
   },
   {
-    uriIMG:
-      "https://res.cloudinary.com/dkbbweo5x/image/upload/v1665626268/sgbh_colection/pic7_xywkjq.jpg",
+    uriIMG: "https://res.cloudinary.com/dkbbweo5x/image/upload/v1665626268/sgbh_colection/pic7_xywkjq.jpg",
     rBooked: "Deluxe Double 2.1",
     bedSize: 2,
     dRooms: 47,
     nUnits: [1, 2, 3, 4],
-    cDate: "November 3, 2022",
+    cDate: "the selected check-in date",
     nGuests: 2,
-    cIn: "Weds Oct 04",
-    cOut: "Weds Oct 05",
+    cIn: "Sample check-in",
+    cOut: "Sample check-out",
     amount: 3500,
     isBook: false,
     aminities: [

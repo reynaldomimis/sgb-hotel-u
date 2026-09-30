@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import soto from "../../images/baguio.jpg";
 import "./cnavbar.scss";
 import { MenuItems } from "../../contexts/MenuItems";
+import { Link } from "react-router-dom";
 
 const CNavbar = () => {
   return (
@@ -17,8 +18,13 @@ const CNavbar = () => {
         className="cn-nav"
       >
         <Container>
-          <Navbar.Brand href="/">
-            <img src={soto} className="soto" alt="" width="70%" />
+          <Navbar.Brand as={Link} to="/">
+            <img
+              src={soto}
+              className="soto"
+              alt="Soto Grande Baguio Hotel"
+              width="70%"
+            />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
@@ -26,12 +32,12 @@ const CNavbar = () => {
           />
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            style={{ paddingLeft: 15, paddingTop: 10, paddingBottom: 15 }}
+            className="cn-collapse"
           >
             <Nav className="me-auto">
-              {MenuItems.map((item, i) => {
+              {MenuItems.map((item) => {
                 return (
-                  <Nav.Link href={item.path} className="list">
+                  <Nav.Link as={Link} to={item.path} className="list" key={item.path}>
                     {item.icon}
                     {item.title}
                   </Nav.Link>

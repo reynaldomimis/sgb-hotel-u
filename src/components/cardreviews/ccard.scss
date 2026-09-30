@@ -1,10 +1,10 @@
 .c-card {
   width: 100%;
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: -1px 1px 8px -3px rgba(0, 0, 0, 0.42);
-  -webkit-box-shadow: -1px 1px 8px -3px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: -1px 1px 8px -3px rgba(0, 0, 0, 0.42);
+  background-color: var(--color-on-brand);
+  box-shadow: -1px 1px 8px -3px var(--color-shadow-strong);
+  -webkit-box-shadow: -1px 1px 8px -3px var(--color-shadow-strong);
+  -moz-box-shadow: -1px 1px 8px -3px var(--color-shadow-strong);
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
       padding: 10px 1rem;
 
       .name {
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         font-weight: 600;
       }
 
@@ -37,14 +37,14 @@
       }
 
       .time {
-        font-size: 0.7rem;
+        font-size: var(--font-size-xs);
         font-weight: 400;
       }
     }
   }
   .c-bottom {
     .cc-content {
-      font-size: 1rem;
+      font-size: var(--font-size-base);
     }
   }
 }
@@ -53,23 +53,23 @@
   .c-card {
     width: 100%;
     padding: 0.6rem;
-    background-color: #fff;
+    background-color: var(--color-on-brand);
     border-radius: 3px;
 
     .c-top {
       .c-name {
         .name {
-          font-size: 0.9rem;
+          font-size: var(--font-size-md);
         }
 
         .time {
-          font-size: 0.6rem;
+          font-size: var(--font-size-2xs);
         }
       }
     }
     .c-bottom {
       .cc-content {
-        font-size: 0.9rem;
+        font-size: var(--font-size-md);
       }
     }
   }

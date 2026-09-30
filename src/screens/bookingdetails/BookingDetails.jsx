@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 const BookingDetails = () => {
   const [phone, setPhone] = useState();
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [formStatus, setFormStatus] = useState(null);
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
 
   const [bdatas, setBdatas] = useState({
     message: "",
@@ -20,10 +20,10 @@ const BookingDetails = () => {
     country: "",
     uGmail: "",
     rGmail: "",
-    cIn: "Saturday, November 26, 2022 from 14:00",
-    cOut: "Saturday, November 27, 2022 from 10:00",
-    cDate: "Nov 18, 2022",
-    dDate: "Nov 20, 2022",
+    cIn: "Sample check-in from 14:00",
+    cOut: "Sample check-out until 10:00",
+    cDate: "the selected check-in date",
+    dDate: "the sample arrival date",
     bRooms: "Deluxe Double",
     tPrice: 5000,
     nUnit: 2,
@@ -48,51 +48,35 @@ const BookingDetails = () => {
     nGuest,
   } = bdatas;
   const onHandleChange = (e) => {
-    e.preventDefault();
     const { name, value } = e.target;
     setBdatas({ ...bdatas, [name]: value });
+    setFormStatus(null);
   };
 
-  const sendEmail = () => {
+  const submitMockBooking = () => {
     if (title === "") {
-      setErrorMessage("Required title");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "Please select a title." });
     } else if (firstname === "") {
-      setErrorMessage("Required firstname");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "Please enter a first name." });
     } else if (lastname === "") {
-      setErrorMessage("Required lastname");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "Please enter a last name." });
     } else if (uGmail === "") {
-      setErrorMessage("Required gmail");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "Please enter an email address." });
     } else if (rGmail === "") {
-      setErrorMessage("Required to re-type gmail");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "Please re-enter your email address." });
     } else if (uGmail !== rGmail) {
-      setErrorMessage("Not match your gmail account");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "The email addresses do not match." });
     } else if (phone == null) {
-      setErrorMessage("Required mobile number");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "Please enter a mobile number." });
     } else if (country === "") {
-      setErrorMessage("Required country");
-      setIsSuccess(true);
+      setFormStatus({ type: "error", message: "Please select a nationality." });
+    } else if (!acceptedTerms) {
+      setFormStatus({ type: "error", message: "Please acknowledge the demo booking terms." });
     } else {
-      setIsSuccess(false);
-      alert("Testing");
-      setBdatas({
-        message: "",
-        title: "",
-        firstname: "",
-        lastname: "",
-        country: "",
-        uGmail: "",
-        rGmail: "",
-        nUnit: "",
-        nGuest: "",
+      setFormStatus({
+        type: "success",
+        message: "Demo booking preview confirmed in this browser only. No reservation, payment, or personal data was submitted.",
       });
-      setPhone();
     }
   };
 
@@ -100,7 +84,7 @@ const BookingDetails = () => {
     <div className="details">
       <div className="wrapper">
         <div className="logo">
-          <img src={soto} className="soto" alt="" />
+          <img src={soto} className="soto" alt="Soto Grande Baguio Hotel" />
         </div>
         <div className="d-checkin">
           <span className="title">Soto Grande Baguio Hotel {}</span>
@@ -218,14 +202,10 @@ const BookingDetails = () => {
           </div>
           <div className="right-panel">
             <span className="title">Guest Details</span>
-            {isSuccess ? (
-              <h6
-                style={{ color: "red", marginLeft: "2rem", marginTop: "1rem" }}
-              >
-                {errorMessage}
-              </h6>
-            ) : (
-              ""
+            {formStatus && (
+              <p className={`form-status form-status--${formStatus.type}`} role="status">
+                {formStatus.message}
+              </p>
             )}
 
             <div className="ctop">
@@ -233,6 +213,9 @@ const BookingDetails = () => {
                 <div className="col1">
                   <label>Title</label>
                   <select name="title" value={title} onChange={onHandleChange}>
+                    <option value="" disabled>
+                      Select title
+                    </option>
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
                     <option value="Ms">Ms</option>
@@ -306,7 +289,6 @@ const BookingDetails = () => {
               <div className="row4">
                 <span className="add">Additional comments(optional)</span>
                 <textarea
-                  style={{ outline: "none" }}
                   rows="5"
                   cols="50"
                   name="message"
@@ -321,30 +303,31 @@ const BookingDetails = () => {
                 <div className="wrapper2">
                   <div className="col1">
                     <p>
-                      We guarantee your booking now and we will contact you soon
-                      to inform about the payment policies. By clicking on the
-                      button below you indicate that you have read and agree to
-                      the Booking Policies.
+                      This portfolio screen previews a booking form. It does not
+                      create a reservation, process a payment, or contact the hotel.
                     </p>
                   </div>
                   <span>
-                    Payment: Full booking item amount will be charged.
+                    Payment: sample pricing only; no charge will be made.
                   </span>
 
                   <div className="col2">
-                    <input type="checkbox" />
+                    <input
+                      type="checkbox"
+                      checked={acceptedTerms}
+                      onChange={(event) => setAcceptedTerms(event.target.checked)}
+                    />
                     <p>
-                      Please check this box to indicate that you have read and
-                      agree to the Booking Policies.
+                      I understand that this is a frontend-only booking preview.
                     </p>
                   </div>
                   <button
                     type="button"
                     className="btn-book"
-                    onClick={sendEmail}
+                    onClick={submitMockBooking}
                   >
                     <HttpsIcon className="icon" />
-                    <h5>Confirm and book</h5>
+                    <span>Preview demo booking</span>
                   </button>
                 </div>
               </div>

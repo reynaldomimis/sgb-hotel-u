@@ -5,7 +5,8 @@ import "./availlist.scss";
 
 const AvailList = (props) => {
   return (
-    <>
+    <section className="availability-list" aria-label="Sample availability">
+      <span className="hs-title1">Sample availability</span>
       <Swiper
         slidesPerView={3}
         spaceBetween={3}
@@ -27,10 +28,9 @@ const AvailList = (props) => {
         }}
         className="mySwiper8"
       >
-        <span className="hs-title1">Available Slot</span>
         {props.children}
       </Swiper>
-    </>
+    </section>
   );
 };
 

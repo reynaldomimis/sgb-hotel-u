@@ -8,7 +8,6 @@ import BookNow from "../../components/buttons/CButton";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import AvailableDate from "../../components/avallist/AvailList";
-import { CCardBody } from "@coreui/react";
 import { availDateList } from "../../contexts/InfoList";
 import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
@@ -30,10 +29,11 @@ const Booking = (props) => {
     dGuests,
     dAmount,
     onCancelBooking,
-    onSubmitBooking,
     amount,
     checkIn,
     checkOut,
+    selectedUnit,
+    isBookable,
 
     //selected rooms
     onUnit,
@@ -62,12 +62,12 @@ const Booking = (props) => {
       <Card className="booking">
         <CardContent>
           <div className="top">
-            <img src={uriIMG} alt="" className="image-room" />
+            <img src={uriIMG} alt={`${rBooked} room`} className="image-room" />
             <div className="wrapper">
               <span className="title">{rBooked}</span>
-              <span className="p1 p2 p3" onClick={onShowAmenities}>
+              <button type="button" className="p1 p2 p3 booking-action" onClick={onShowAmenities}>
                 View all amenities
-              </span>
+              </button>
               {showAmi && <ul>{listAmenities}</ul>}
               <p className="p1">
                 Bed size: {bedSize} queen Bedroom size: {dRooms} m2
@@ -75,41 +75,31 @@ const Booking = (props) => {
               <div className="free-wrapper">
                 <div className="refund">
                   <span className="p2">No refund</span>
-                  <ErrorOutlinedIcon
-                    className="error-icon"
-                    onClick={onShowRefund}
-                  />
+                  <button type="button" className="booking-icon-button" onClick={onShowRefund} aria-label="Show cancellation policy">
+                    <ErrorOutlinedIcon className="error-icon" />
+                  </button>
                 </div>
 
                 <div className="break">
                   <span className="p2">Breakfast included </span>
-                  <RestaurantOutlinedIcon
-                    className="res"
-                    onClick={onShowBreakFast}
-                  />
+                  <button type="button" className="booking-icon-button" onClick={onShowBreakFast} aria-label="Show breakfast information">
+                    <RestaurantOutlinedIcon className="res" />
+                  </button>
                 </div>
               </div>
-              {(showRefund && (
-                <h1
-                  style={{ fontSize: "14px", color: "gray", marginTop: "6px" }}
-                >
-                  No refund available data
-                </h1>
-              )) ||
-                (showBreakFast && (
-                  <h1
-                    style={{
-                      fontSize: "14px",
-                      color: "gray",
-                      marginTop: "6px",
-                    }}
-                  >
-                    No breakfast available data
-                  </h1>
-                ))}
+              {showRefund && (
+                <p className="booking-note">
+                  Sample policy: cancellation terms are illustrative only.
+                </p>
+              )}
+              {showBreakFast && (
+                <p className="booking-note">
+                  Sample amenity: breakfast availability is illustrative only.
+                </p>
+              )}
             </div>
             <div className="b-cost">
-              <span className="b-details">Rooms Details</span>
+              <span className="b-details">Booking preview</span>
               <div className="b-row1">
                 <span className="b-rooms">Rooms booked : {dBooked}</span>
                 <span className="b-rooms">Number of units : {rooms}</span>
@@ -117,7 +107,7 @@ const Booking = (props) => {
                 <span className="b-rooms">Check-in: {checkIn}</span>
                 <span className="b-rooms">Check out: {checkOut}</span>
                 <span className="b-tcost">
-                  Total price: ₱ {dAmount} per night
+                  Sample total: ₱ {dAmount}
                 </span>
               </div>
               <div className="b-row2">
@@ -126,13 +116,17 @@ const Booking = (props) => {
                   bName="book-wrapper3"
                   onClick={onCancelBooking}
                 />
-                <Link to="/bookingdetails" style={{ textDecoration: "none" }}>
+                {isBookable ? (
+                  <Link to="/bookingdetails" className="booking-link">
+                    <BookNow label="Preview booking" bName="book-wrapper" />
+                  </Link>
+                ) : (
                   <BookNow
-                    label="Book Now"
+                    label="Select dates and rooms"
                     bName="book-wrapper"
-                    onClick={onSubmitBooking}
+                    disabled
                   />
-                </Link>
+                )}
               </div>
             </div>
           </div>
@@ -154,8 +148,8 @@ const Booking = (props) => {
               </div>
 
               <div className="mright">
-                <select value={rooms} onChange={onUnit}>
-                  <option value="none" selected>
+                <select value={selectedUnit} onChange={onUnit} aria-label={`Select rooms for ${rBooked}`}>
+                  <option value="">
                     Select Option
                   </option>
                   {nUnits}
@@ -163,28 +157,27 @@ const Booking = (props) => {
                 Rooms Slot
               </div>
               <div className="mright">
-                <CalendarMonthOutlinedIcon
-                  onClick={onShowAvailable}
-                  className="cal"
-                />
+                <button type="button" className="booking-icon-button" onClick={onShowAvailable} aria-label="Show sample availability">
+                  <CalendarMonthOutlinedIcon className="cal" />
+                </button>
                 Calendar
               </div>
             </div>
           </div>
           {showAvailable && (
-            <CCardBody>
+            <div className="booking-availability">
               <AvailableDate>
                 {availDateList.map((date, i) => {
                   return (
-                    <SwiperSlide className="rs-ss">
-                      <div key={i} className="al-row">
+                    <SwiperSlide className="rs-ss" key={date.rBooked}>
+                      <div className="al-row">
                         <span className="al-date">Not Available</span>
                       </div>
                     </SwiperSlide>
                   );
                 })}
               </AvailableDate>
-            </CCardBody>
+            </div>
           )}
         </CardContent>
       </Card>

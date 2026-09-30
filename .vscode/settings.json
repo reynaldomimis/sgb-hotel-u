@@ -1,5 +1,0 @@
-{
-    "javascript.format.insertSpaceAfterConstructor": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true
-}

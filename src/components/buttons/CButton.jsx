@@ -1,15 +1,18 @@
 import React from "react";
 import "./cbutton.scss";
 
-const CButton = ({ label, onClick, bName }) => {
+const CButton = ({ label, onClick, bName = "book-wrapper", type = "button", disabled = false }) => {
   return (
-    <>
-      <div className={bName}>
-        <div className="btn-book" onClick={onClick}>
-          <span>{label}</span>
-        </div>
-      </div>
-    </>
+    <div className={bName}>
+      <button
+        className="btn-book"
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+      >
+        <span>{label}</span>
+      </button>
+    </div>
   );
 };
 

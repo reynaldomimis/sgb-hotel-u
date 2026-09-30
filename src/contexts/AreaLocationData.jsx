@@ -3,54 +3,54 @@ import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 
 const AreaLocationData = [
   {
-    t1: "Centris Mall – 5-minute walk",
+    t1: "Baguio Cathedral – a short drive away",
     icon: <DirectionsRunIcon />,
   },
   {
-    t1: "Tomas Morato, Timog, and Quezon City nightlife – 5-minute drive",
+    t1: "Session Road – a short drive away",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "Amoranto Sports Complex – 5-minute drive",
+    t1: "Burnham Park – a short drive away",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "SM North Edsa – 10-minute drive",
+    t1: "Baguio Botanical Garden – nearby",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "Trinoma Mall – 10-minute drive",
+    t1: "Camp John Hay – nearby",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "Araneta Center, Gateway Mall – 15-minute drive",
+    t1: "Mines View Park – a scenic drive away",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "Smart Araneta Coliseum – 15-minute drive",
+    t1: "Wright Park – nearby",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "Greenhills Shopping Center – 15-minute drive",
+    t1: "The Mansion – nearby",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "Robinsons Galleria – 25-minute drive",
+    t1: "Good Shepherd Convent – a scenic drive away",
     icon: <LocalTaxiIcon />,
   },
   {
-    t1: "SM Megamall – 30-minute drive",
+    t1: "Baguio public market and local cafés – within the city",
     icon: <LocalTaxiIcon />,
   },
 ];
 
 const AreaLocationInfo = {
   datas: {
-    p1: "Convenient and central, the location of La Breza Hotel in Quezon City, Metro Manila, Philippines is the main reason why guests stay and return time and again. Key places are easily accessible, both for business and pleasure.",
-    p2: "The accommodation in Quezon City is within walking distance of various offices, shops, malls and entertainment clubs. For travelers with business to attend to in Ortigas or Makati, these hubs can be reached through the MRT at the Quezon Avenue Station.",
+    p1: "Soto Grande Baguio is presented in this portfolio as a convenient base for discovering the City's pine-covered viewpoints, cafés, parks, and heritage sites.",
+    p2: "Nearby points of interest make it easy to plan relaxed sightseeing, casual dining, and short city excursions during a Baguio stay.",
     addInfo:
-      "Additionally, 2 of the country’s biggest TV networks are very near. Visiting ABS-CBN network only takes a 5-minute walk, while going to GMA network from this hotel in Quezon City only takes a 5-minute drive.",
-    title: "AREA INFORMATION",
+      "Travel times are illustrative only and should be verified with a live map before travel.",
+    title: "AREA HIGHLIGHTS",
   },
 };
 

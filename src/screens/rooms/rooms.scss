@@ -21,17 +21,17 @@
 
     
     .rc-p1 {
-      font-size: 1rem;
+      font-size: var(--font-size-base);
     }
 
     .rc-t1 {
-      font-size: 1rem;
+      font-size: var(--font-size-base);
     }
 
 
 
     .rc-t2 {
-      font-size: 1.3rem;
+      font-size: var(--font-size-xl);
     }
     .rc-p2 {
       margin: 2rem 0;
@@ -77,11 +77,11 @@
     flex-direction: column;
   
     .rc-p1 {
-      font-size: 1rem;
+      font-size: var(--font-size-base);
     }
 
     .rc-t1 {
-      font-size: 1rem;
+      font-size: var(--font-size-base);
     }
 
     .rc-nav {
@@ -89,7 +89,7 @@
     }
 
     .rc-t2 {
-      font-size: 1.3rem;
+      font-size: var(--font-size-xl);
     }
 
     .rc-p2 {
@@ -107,7 +107,7 @@
     .rc-nav {
       margin: 2rem auto;
       padding: 0.6rem 3rem;
-      background-color: ghostwhite;
+      background-color: var(--color-surface-raised);
      
 
       .li{

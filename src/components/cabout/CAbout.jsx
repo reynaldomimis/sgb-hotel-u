@@ -15,9 +15,9 @@ const CAbout = () => {
         modules={[EffectCards]}
         className="mySwiper1"
       >
-        {InfoList.map((item, i) => {
+        {InfoList.map((item) => {
           return (
-            <SwiperSlide key={i} className={item.cName}>
+            <SwiperSlide key={item.title} className={item.cName}>
               <span className="s-title">{item.title}</span>
               <p className="s-des">{item.des}</p>
             </SwiperSlide>

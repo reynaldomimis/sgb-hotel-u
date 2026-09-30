@@ -13,28 +13,37 @@
     li {
       list-style: none;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: var(--font-size-base);
       padding: 13px 2rem;
-      background-color: #cd983f;
+      background-color: var(--color-accent-strong);
       margin-right: 8px;
-      color: white;
+      color: var(--color-surface);
       border-radius: 10px;
 
       &:hover {
-        color: var(--cText-sec);
+        color: var(--color-text-muted);
         cursor: pointer;
-        background-color: bisque;
+        background-color: var(--color-accent-pale);
       }
+    }
+
+    .lt-room-option {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      text-align: inherit;
     }
 
     .ltn-sp {
       padding: 1rem 2rem;
-      font-size: 1rem;
+      font-size: var(--font-size-base);
       font-weight: 600;
-      border: 1px solid orangered;
+      border: 1px solid var(--color-accent-strong);
 
       &:hover {
-        background-color: gainsboro;
+        background-color: var(--color-surface-disabled);
         cursor: pointer;
         padding: 1rem 1rem;
       }
@@ -42,7 +51,7 @@
   }
 
   .lt-row {
-    background-color: #0d4c33;
+    background-color: var(--color-brand);
     display: flex;
     flex-direction: row;
     border-radius: 20px;
@@ -66,18 +75,18 @@
       padding-right: 2rem;
 
       .lt-t1 {
-        font-size: 2.8rem;
-        color: goldenrod;
+        font-size: var(--font-size-6xl);
+        color: var(--color-accent-warm);
         line-height: 2.7rem;
         margin-bottom: 10px;
       }
       .lt-l1 {
-        font-size: 1rem;
-        color: white;
+        font-size: var(--font-size-base);
+        color: var(--color-surface);
       }
       .lt-l2 {
-        font-size: 1rem;
-        color: white;
+        font-size: var(--font-size-base);
+        color: var(--color-surface);
       }
     }
   }
@@ -107,19 +116,19 @@
         margin-left: -1.5rem;
 
         &:hover {
-          color: black;
+          color: var(--color-text);
           cursor: pointer;
         }
       }
 
       .ltn-sp {
         padding: 1rem 2rem;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
         font-weight: 600;
-        border: 1px solid orangered;
+        border: 1px solid var(--color-accent-strong);
 
         &:hover {
-          background-color: gainsboro;
+          background-color: var(--color-surface-disabled);
           cursor: pointer;
           padding: 1rem 1rem;
         }
@@ -127,7 +136,7 @@
     }
 
     .lt-row {
-      background-color: ghostwhite;
+      background-color: var(--color-surface-raised);
       display: flex;
       flex-direction: column;
       border-radius: 20px;
@@ -155,17 +164,17 @@
       
 
         .lt-t1 {
-          font-size: 2.5rem;
-          color: goldenrod;
+          font-size: var(--font-size-5xl);
+          color: var(--color-accent-warm);
           margin: 1rem;
         }
         .lt-l1 {
-          font-size: 1rem;
-          color: var(--cText-sec);
+          font-size: var(--font-size-base);
+          color: var(--color-text-muted);
         }
         .lt-l2 {
-          font-size: 1rem;
-          color: var(--cText-sec);
+          font-size: var(--font-size-base);
+          color: var(--color-text-muted);
         }
       }
     }
@@ -183,7 +192,7 @@
     }
    
     .lt-row {
-      background-color: #0d4c33;
+      background-color: var(--color-brand);
       display: flex;
       flex-direction: column;
       border-radius: 20px;
@@ -211,17 +220,17 @@
       
 
         .lt-t1 {
-          font-size: 2.5rem;
-          color: goldenrod;
+          font-size: var(--font-size-5xl);
+          color: var(--color-accent-warm);
           margin: 1rem;
         }
         .lt-l1 {
-        font-size: 1rem;
-        color: white;
+        font-size: var(--font-size-base);
+        color: var(--color-surface);
       }
       .lt-l2 {
-        font-size: 1rem;
-        color: white;
+        font-size: var(--font-size-base);
+        color: var(--color-surface);
         margin-bottom: 2rem;
       }
       }

@@ -1,7 +1,7 @@
 .hs-title {
-  font-size: var(--sTxt-sec);
+  font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: var(--cTxt-pri);
+  color: var(--color-text);
   margin-left: 10px;
 }
 
@@ -24,7 +24,7 @@
 
 @media only screen and (max-width: 578px) {
   .hs-title {
-    font-size: var(--sTxt-ter);
+    font-size: var(--font-size-lg);
     font-weight: 600;
   }
 

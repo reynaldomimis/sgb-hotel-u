@@ -5,12 +5,13 @@ import { FlistData, FlistRooms } from "../../contexts/FListData";
 import HSwiper from "../../components/hswiper/HSwiper";
 import CFooter from "../../components/cfooter/CFooter";
 import ListRooms from "../../components/listrooms/ListRooms";
+import { RoomList } from "../../contexts/ImageList";
 
 const Rooms = () => {
   return (
     <>
       <div className="r-fac">
-        <HSwiper data="RoomList" />
+        <HSwiper images={RoomList} label="Hotel rooms" />
         <LineTitle label="Soto Grande Baguio Hotel: Accomodation" />
         <div className="rc-lict">
           <div className="rc-content">
@@ -18,9 +19,9 @@ const Rooms = () => {
             <span className="rc-t1">{FlistData.rp2}</span>
             <div className="r-navcol">
               <ul className="rc-nav">
-                {FlistRooms.map((item, i) => {
-                  return (
-                    <li className="li" key={i}>
+              {FlistRooms.map((item) => {
+                return (
+                  <li className="li" key={item}>
                       {item}
                     </li>
                   );

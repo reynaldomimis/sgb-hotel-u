@@ -1,27 +1,31 @@
 .cn-nav {
-  border-bottom: 3px solid ghostwhite;
+  border-bottom: 3px solid var(--color-surface-raised);
   min-width: 100%;
   .cn-toogle {
     border: none;
 
     &:hover {
-      background-color: ghostwhite;
+      background-color: var(--color-surface-raised);
     }
     &:focus {
       box-shadow: none;
     }
   }
+
+  .cn-collapse {
+    padding: 0.625rem 0 0.9375rem 0.9375rem;
+  }
   .list {
-    color: black;
+    color: var(--color-text);
     margin-right: 1rem;
     text-decoration: none;
     font-weight: 400;
-    color: #404247;
-    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-lg);
     padding: 0.8rem 0 0;
 
     &:hover {
-      border-bottom: 1px solid orangered;
+      border-bottom: 1px solid var(--color-accent-strong);
     }
     .cn-ic {
       display: none;
@@ -41,14 +45,14 @@
         transform: translateX(10px);
         transition: all 0.2s ease-in;
         border: none;
-        color: #000;
+        color: var(--color-text);
 
         .cn-ic {
-          color: orangered;
+          color: var(--color-accent-strong);
         }
       }
       .cn-ic {
-        font-size: 1.1rem;
+        font-size: var(--font-size-lg);
         display: block;
         margin-right: 0.6rem;
       }

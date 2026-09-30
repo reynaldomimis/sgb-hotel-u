@@ -34,8 +34,8 @@ const RSwiper = ({ title, data }) => {
       >
         {data.map((item, i) => {
           return (
-            <SwiperSlide key={i} className="rs-ss">
-              <img src={item} alt="" className="rs-img" />
+            <SwiperSlide key={`${item}-${i}`} className="rs-ss">
+              <img src={item} alt={`${title}, slide ${i + 1}`} className="rs-img" />
             </SwiperSlide>
           );
         })}

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-
 .review {
   width: 70%;
   padding: 2rem 3rem;
@@ -17,7 +15,7 @@
     width: 100%;
     margin: 0;
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--color-on-brand);
   }
   .recard {
     padding: 0;
